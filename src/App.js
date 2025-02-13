@@ -13,7 +13,7 @@ const App = () => {
   const [gameStarted, setGameStarted] = useState(false);
   const [message, setMessage] = useState("");
   const [winner, setWinner] = useState(null);
-  const [ , setWinningIndexes] = useState([]); // ✅ Track winning cells
+  const [winningIndexes, setWinningIndexes] = useState([]); // ✅ Track winning cells
   useEffect(() => {
     socket.on("roomData", (data) => {
       setBoard(data.board);
